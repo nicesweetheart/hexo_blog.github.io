@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>逻辑分支 | 火箭队喵喵大王</title><meta name="author" content="小王子"><meta name="copyright" content="小王子"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="逻辑分支引入：我们在日常生活中，有很多事情是需要做判断的，比如说，去服装城买衣服，你看中一件衣服，老板要300元，你立马就会想，这个价格是否贵了，判断的结果只有两种可能，一是贵，二是不贵，贵了你就不买了，不贵你就买了。再比如去网吧，网管也要判断你是否满18岁，结果也只有两种，是和否，是就上网，不是就看别人上网，再比如，学校根据考试成绩对每个人进行评级，如果成绩大于60就合格，否则就不合格，如果成绩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑分支">
+<meta property="og:url" content="http://example.com/posts/5535e559.html">
+<meta property="og:site_name" content="火箭队喵喵大王">
+<meta property="og:description" content="逻辑分支引入：我们在日常生活中，有很多事情是需要做判断的，比如说，去服装城买衣服，你看中一件衣服，老板要300元，你立马就会想，这个价格是否贵了，判断的结果只有两种可能，一是贵，二是不贵，贵了你就不买了，不贵你就买了。再比如去网吧，网管也要判断你是否满18岁，结果也只有两种，是和否，是就上网，不是就看别人上网，再比如，学校根据考试成绩对每个人进行评级，如果成绩大于60就合格，否则就不合格，如果成绩">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-22T14:51:22.000Z">
+<meta property="article:modified_time" content="2022-11-23T01:49:40.987Z">
+<meta property="article:author" content="小王子">
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/5535e559"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '逻辑分支',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-23 09:49:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">火箭队喵喵大王</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">逻辑分支</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-22T14:51:22.000Z" title="发表于 2022-11-22 22:51:22">2022-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-23T01:49:40.987Z" title="更新于 2022-11-23 09:49:40">2022-11-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="逻辑分支"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="逻辑分支"><a href="#逻辑分支" class="headerlink" title="逻辑分支"></a>逻辑分支</h2><p>引入：我们在日常生活中，有很多事情是需要做判断的，比如说，去服装城买衣服，你看中一件衣服，老板要300元，你立马就会想，这个价格是否贵了，判断的结果只有两种可能，一是贵，二是不贵，贵了你就不买了，不贵你就买了。再比如去网吧，网管也要判断你是否满18岁，结果也只有两种，是和否，是就上网，不是就看别人上网，再比如，学校根据考试成绩对每个人进行评级，如果成绩大于60就合格，否则就不合格，如果成绩大于90，就优秀等等。。。在咱们的代码中，也会有很多判断，比如咱们做的练习，小红满足条件了，就能嫁人了，不满足条件就不能嫁人。咱们昨天只是能看到一个布尔值，并没有进行下一步的操作，通过今天的学习就可以进行下一步的操作了，咱们今天学习的主要内容就是判断，也叫做逻辑分支。</p>
+<p>判断也会有很多种，比如：</p>
+<ul>
+<li>考试成绩大于60，及格</li>
+<li>考试成绩大于60，及格，否则，不及格</li>
+<li>考试成绩如果大于60并且小于80，及格，如果大于80并且小于90，良好，如果大于90，优秀</li>
+</ul>
+<p>根据上述几种情况，我们把判断分为三种，根据结果只做一个件事情的，叫单分支，做两件事情的，叫做双分支，做多件事情的，叫多分支。</p>
+<h3 id="单分支"><a href="#单分支" class="headerlink" title="单分支"></a>单分支</h3><p>语法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式)&#123;</span><br><span class="line">	当条件表达式的结果为true的时候要执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age;</span><br><span class="line"><span class="keyword">if</span>(age&gt;<span class="number">18</span>)&#123;</span><br><span class="line">   <span class="title function_">alert</span>(<span class="string">&quot;已经成年了&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><p>语法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式)&#123;</span><br><span class="line">	当条件表示式的结果为true的时候要执行的代码</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	当条件表达式的结果为false的时候要执行的代码   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(age&gt;<span class="number">18</span>)&#123;</span><br><span class="line">   <span class="title function_">alert</span>(<span class="string">&quot;成年了&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;未成年&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>案例：输入年份，判断是否是闰年	</p>
+<h3 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h3><p>语法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式1)&#123;</span><br><span class="line">	当条件表达式1的结果为true的时候，要执行的代码</span><br><span class="line">&#125;else if(条件表达式2)&#123;</span><br><span class="line">	当条件表达式2的结果为true的时候，要执行的代码</span><br><span class="line">&#125;else if(条件表达式3)&#123;</span><br><span class="line">	当条件表达式3的结果为true的时候，要执行的代码</span><br><span class="line">&#125;</span><br><span class="line">。。。</span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">多分支可以有若干个<span class="keyword">else</span> <span class="keyword">if</span>，<span class="keyword">else</span>根据需要可以有也可以没有</span></span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> score = <span class="title class_">Number</span>(<span class="title function_">prompt</span>(<span class="string">&quot;请输入考试成绩：&quot;</span>));</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isNaN</span>(score))&#123;</span><br><span class="line">	<span class="title function_">alert</span>(<span class="string">&quot;输入不正确&quot;</span>);   </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">0</span> &amp;&amp; score&lt;<span class="number">60</span>)&#123;</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;不及格&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">60</span> &amp;&amp; score&lt;<span class="number">70</span>)&#123;</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;及格了&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">70</span> &amp;&amp; score&lt;<span class="number">80</span>)&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;丙&quot;</span>);         </span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span> &amp;&amp; score&lt;<span class="number">90</span>)&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;乙&quot;</span>);         </span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">90</span> &amp;&amp; score&lt;=<span class="number">100</span>)&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;甲&quot;</span>);         </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;输入不正确&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支结构的简写方式"><a href="#分支结构的简写方式" class="headerlink" title="分支结构的简写方式"></a>分支结构的简写方式</h3><p>如果单分支或双分支以及多分支的大括号中只有一行代码的时候，大括号可以省略。</p>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单分支的简写</span></span><br><span class="line"><span class="keyword">var</span> age;</span><br><span class="line"><span class="keyword">if</span>(age&gt;<span class="number">18</span>)</span><br><span class="line">   <span class="title function_">alert</span>(<span class="string">&quot;已经成年了&quot;</span>);</span><br><span class="line"><span class="comment">// 双分支的简写</span></span><br><span class="line"><span class="keyword">if</span>(age&gt;<span class="number">18</span>)</span><br><span class="line">   <span class="title function_">alert</span>(<span class="string">&quot;成年了&quot;</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;未成年&quot;</span>);</span><br><span class="line"><span class="comment">// 多分支的简写</span></span><br><span class="line"><span class="keyword">var</span> score = <span class="title class_">Number</span>(<span class="title function_">prompt</span>(<span class="string">&quot;请输入考试成绩：&quot;</span>));</span><br><span class="line"><span class="keyword">var</span> score = <span class="title class_">Number</span>(<span class="title function_">prompt</span>(<span class="string">&quot;请输入考试成绩：&quot;</span>));</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isNaN</span>(score))</span><br><span class="line">	<span class="title function_">alert</span>(<span class="string">&quot;输入不正确&quot;</span>);   </span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">0</span> &amp;&amp; score&lt;<span class="number">60</span>)</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;不及格&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">60</span> &amp;&amp; score&lt;<span class="number">70</span>)</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;及格了&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">70</span> &amp;&amp; score&lt;<span class="number">80</span>)</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;丙&quot;</span>);         </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span> &amp;&amp; score&lt;<span class="number">90</span>)</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;乙&quot;</span>);         </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">90</span> &amp;&amp; score&lt;=<span class="number">100</span>)</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;甲&quot;</span>);         </span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;输入不正确&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="分支结构的嵌套"><a href="#分支结构的嵌套" class="headerlink" title="分支结构的嵌套"></a>分支结构的嵌套</h3><p>例：定义三个变量，求出三个值中的最大值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a,b,c;</span><br><span class="line"><span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">    <span class="keyword">if</span>(a&gt;c)&#123;</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;变量a最大&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;变量c最大&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b&gt;c)&#123;</span><br><span class="line">       <span class="title function_">alert</span>(<span class="string">&quot;变量b最大&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;变量c最大&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="switch多路判断"><a href="#switch多路判断" class="headerlink" title="switch多路判断"></a>switch多路判断</h3><p>语法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">switch(变量)&#123;</span><br><span class="line">    case 值1:</span><br><span class="line">        执行的代码块</span><br><span class="line">    break;</span><br><span class="line">    case 值2:</span><br><span class="line">        执行的代码块</span><br><span class="line">    break;</span><br><span class="line">    。。。</span><br><span class="line">    default:</span><br><span class="line">        执行代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用说明：</p>
+<ol>
+<li>break表示当前分支执行后就结束switch的运行，后续代码不再运行</li>
+<li>default可以理解为判断语句中的else</li>
+<li>case理解为if来判断这个变量是否全等于某个值</li>
+</ol>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> day = <span class="title class_">Number</span>(<span class="title function_">prompt</span>(<span class="string">&quot;请输入一个0~7之间数字：&quot;</span>));</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isNaN</span>(day) || day&lt;=<span class="number">0</span> || day&gt;<span class="number">7</span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(day)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;今天星期一&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;今天星期二&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;今天星期三&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;今天星期四&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;今天星期五&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="attr">default</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><font color="red">注意：使用多路判断的时候，能使用switch进行判断，就尽量使用switch，因为switch的判断都是确定的值，条件比较简单，所以效率高。</font></p>
+<p>使用场景：</p>
+<ul>
+<li>如果判断的条件比较复杂，使用if</li>
+<li>条件是确定的值，分两种情况：<ul>
+<li>如果判断的分支小于等于3个，就使用if，这时候的效率和switch一样</li>
+<li>如果大于3个，就使用switch。</li>
+</ul>
+</li>
+<li>switch判断使用的是<font color="red"><strong>全等于(&#x3D;&#x3D;&#x3D;)</strong></font></li>
+</ul>
+<h3 id="switch-穿透写法"><a href="#switch-穿透写法" class="headerlink" title="switch 穿透写法"></a>switch 穿透写法</h3><p>如果case后面不写break，那当前case执行后，会继续执行后面的case中的代码</p>
+<p>输出1~5：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> day;</span><br><span class="line"><span class="keyword">switch</span>(day)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;今天星期一&quot;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;今天星期二&quot;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;今天星期三&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;今天星期四&quot;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;今天星期五&quot;</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当day的值为2的时候，不会执行后面的代码，当day的值为3的时候，执行完3的代码，还会执行4的代码，因为3的代码后面没有break。</p>
+<p>这时候可以利用switch的这个特性，简写一些代码：</p>
+<p>输入一个月份，判断并输出这个月有多少天？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> month = <span class="title class_">Number</span>(<span class="string">&quot;请输入一个月份：&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isNaN</span>(month) || month&lt;=<span class="number">0</span> || month&gt;<span class="number">12</span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(day)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">8</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;这个月有31天&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">9</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;这个月有30天&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;这个月有29天或28天&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">        <span class="attr">default</span>:</span><br><span class="line">            <span class="title function_">alert</span>(<span class="string">&quot;输入错误&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="if条件中的细节"><a href="#if条件中的细节" class="headerlink" title="if条件中的细节"></a>if条件中的细节</h3><p>if条件的结果是布尔值，所以可以将布尔值当做条件放入if的小括号中</p>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">   <span class="title function_">alert</span>(<span class="string">&quot;真的&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;假的&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果将别的非布尔值的表达式或数据放入条件小括号中，会发生隐形的类型转换</p>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="number">2</span>)&#123; <span class="comment">// 这里的2被转换成了布尔型</span></span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h3><p>if双分支有一种简写方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">条件?条件成立时运行的代码段:条件不成立时运行的代码段;</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&gt;b?<span class="variable language_">console</span>.<span class="title function_">log</span>(a):<span class="variable language_">console</span>.<span class="title function_">log</span>(b);</span><br></pre></td></tr></table></figure>
+
+<p>这种表达双分支的方式叫做三元运算，也叫做三元表达式。</p>
+<p>三元运算有个特点：可以将整个表达式当做一个值，可以赋值给一个变量，也可以输出</p>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> max = a&gt;b?<span class="attr">a</span>:b; <span class="comment">// 将a与b中较大的数赋值给变量max</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a&gt;b?<span class="attr">a</span>:b); <span class="comment">// 将a与b中较大的数输出</span></span><br></pre></td></tr></table></figure>
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">小王子</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/5535e559.html">http://example.com/posts/5535e559.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">火箭队喵喵大王</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小王子</div><div class="author-info__description">这是我的第一个博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF"><span class="toc-number">1.</span> <span class="toc-text">逻辑分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%88%86%E6%94%AF"><span class="toc-number">1.1.</span> <span class="toc-text">单分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%88%86%E6%94%AF"><span class="toc-number">1.2.</span> <span class="toc-text">双分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%88%86%E6%94%AF"><span class="toc-number">1.3.</span> <span class="toc-text">多分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%E7%9A%84%E7%AE%80%E5%86%99%E6%96%B9%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">分支结构的简写方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="toc-number">1.5.</span> <span class="toc-text">分支结构的嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch%E5%A4%9A%E8%B7%AF%E5%88%A4%E6%96%AD"><span class="toc-number">1.6.</span> <span class="toc-text">switch多路判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch-%E7%A9%BF%E9%80%8F%E5%86%99%E6%B3%95"><span class="toc-number">1.7.</span> <span class="toc-text">switch 穿透写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E6%9D%A1%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%BB%86%E8%8A%82"><span class="toc-number">1.8.</span> <span class="toc-text">if条件中的细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97"><span class="toc-number">1.9.</span> <span class="toc-text">三元运算</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5535e559.html" title="逻辑分支"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="逻辑分支"/></a><div class="content"><a class="title" href="/posts/5535e559.html" title="逻辑分支">逻辑分支</a><time datetime="2022-11-22T14:51:22.000Z" title="发表于 2022-11-22 22:51:22">2022-11-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 小王子</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
